@@ -1,0 +1,145 @@
+.box {
+    background-color: #ffffff;
+    color: #000;
+    /* margin: 1.5%; */
+    border: 1px solid #787878;
+    padding: 15px;
+    height: 100%;
+}
+
+a, span {
+    width: 100%;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+.col-lg-6 {
+    margin-bottom: 30px;
+}
+
+.col-lg-6.last {
+    margin-bottom: 0;
+}
+
+.col-lg-6.new_box {
+    margin: 1.5%;
+    max-width: 47%;
+    height: auto;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    /* border-bottom: 1px dotted black; */
+    opacity: 1;
+    z-index: auto !important;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(164, 114, 110);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    -webkit-transition-property: opacity;
+    /* Safari */
+    -webkit-transition-duration: 1s;
+    /* Safari */
+    -webkit-transition-delay: .1s;
+    /* Safari */
+    -webkit-transition-timing-function: ease-in-out;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-delay: .1s;
+    opacity: 0;
+    /* Position the tooltip */
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    bottom: 0;
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+}
+
+.big {
+    width: 180px !important;
+    left: -50% !important;
+    right: -50% !important;
+}
+
+.sr {
+    width: 170px !important;
+}
+
+.aa {
+    width: 240px !important;
+    z-index: 10 !important;
+}
+
+/* [1] The container */
+
+.img-hover-zoom {
+    margin-bottom: 1rem;
+    height: auto;
+    /* [1.1] Set it as per your need */
+    overflow: hidden;
+    border-radius: .25rem!important;
+    /* [1.2] Hide the overflowing of child elements */
+}
+
+/* [2] Transition property for smooth transformation of images */
+
+.img-hover-zoom img {
+    transform-origin: 50% 50%;
+    transition: transform 1s, filter .5s ease-out;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+
+.img-hover-zoom:hover img {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+@media(max-width:991px) {
+    .col-lg-6.last {
+        margin-bottom: 30px;
+    }
+    .col-lg-6.last+.col-lg-6.last {
+        margin-bottom: 0px;
+    }
+    .col-lg-6.new_box {
+        max-width: 100%;
+    }
+    .order-1, .order-3 {
+        margin-bottom: 0px;
+    }
+}
+
+@media(min-width:992px) {
+    .tooltip .tooltiptext {
+        font-size: 12px;
+    }
+    .last_header {
+        margin-bottom: 0px;
+    }
+}
+
+@media(min-width:1040px) {
+    .tooltip .tooltiptext {
+        font-size: inherit;
+    }
+}
